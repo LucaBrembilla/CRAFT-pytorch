@@ -19,7 +19,7 @@ def init_weights(modules):
             m.weight.data.normal_(0, 0.01)
             m.bias.data.zero_()
 
-def vgg16_bn(pretrained=True, **kwargs):
+def vgg16_bn(pretrained=True, freeze=True, **kwargs):
     """ VGG 16-layer model (configuration "D") with batch normalization """
     model = models.vgg16_bn(pretrained=pretrained, **kwargs)
     return model
